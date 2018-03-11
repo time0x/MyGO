@@ -1,9 +1,10 @@
 // 当前程序的包名
 package main
 
-// 导入的其他包名
+// 导入的其他包名,导入的包必须使用，否则会报错
 import (
-    "fmt"
+    // 如果别名使用 . 的话，调用包的方法时候可以直接调用
+    otherFmtName "fmt"
 )
 
 // 常量的赋值
@@ -23,9 +24,7 @@ type goxxx interface{}
 
 // 由main 函数作为程序入口启动
 func main() {
-    fmt.Println("hello world!")
+    // fmt.Println("hello world!")
+    // Println("hello world!")  别名为 . 可以直接调用
+    otherFmtName.Println("hello world!")
 }
-
-
-
-
