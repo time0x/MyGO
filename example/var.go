@@ -12,8 +12,7 @@ type (
 var (
 	aa  int    //int 默认为 0，
 	bb  bool   //bool 默认为 false，
-	str string //string 为空字符串
-	//float 为 0.0，，指针为 nil
+	str string //string 为空字符串,float 为 0.0，，指针为 nil
 )
 
 const (
@@ -27,10 +26,16 @@ const (
 	const_f = 2
 )
 
+// const (
+// 	const_d = iota // 0 // 不可以重复声明
+// 	const_e        // 1
+// 	const_f        // 2
+// )
+
 const (
-	const_d = iota // 0 // 也可以使用
-	const_e        // 1
-	const_f        // 2
+	const_g = "A"  //
+	const_h        // 1
+	const_i = iota // 组中每定义1个常量自动递增1,所以这里是 3
 )
 
 func main() {
@@ -77,5 +82,10 @@ func main() {
 
 	// 常量
 	fmt.Println(const_b)
-	fmt.Println(const_b)
+	fmt.Println(const_c)
+
+	// 枚举
+	fmt.Println(const_g)
+	fmt.Println(const_h)
+	fmt.Println(const_i)
 }
