@@ -64,9 +64,20 @@ LABEL1: // 标签
 	for {
 		for i := 0; i < 10; i++ {
 			if i > 3 {
-				break // 只可以跳出一层循环
+				break LABEL1 // 不使用LABEL1 ，只可以跳出一层循环
 			}
 		}
 	}
+	fmt.Println("for break is over")
 
+	// goto 是调整程序的执行位置
+	for {
+		for i := 0; i < 10; i++ {
+			if i > 3 {
+				goto LABEL2 // 如果需要跳出最外层循环，要把goto 放在循环外面之下
+			}
+		}
+	}
+LABEL2: // 标签
+	fmt.Println("for goto is over")
 }
