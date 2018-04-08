@@ -53,6 +53,6 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(arr_l)
+	fmt.Println(arr_l) // [266 77 44 11 8 4 1]
 
 }
