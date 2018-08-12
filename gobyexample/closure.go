@@ -11,10 +11,15 @@ func intSeq() func() int {
 		return i
 	}
 }
+
 func main() {
+	fmt.Println("这里有点问题。。。")
 	nextInt := intSeq()
 
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
+
+	nextInts := intSeq()
+	fmt.Println(nextInts())
 }
